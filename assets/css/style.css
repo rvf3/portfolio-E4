@@ -682,8 +682,8 @@ body::before {
 /*---taille image certif---*/
 
 .certification__item img {
-    width: 85px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     border-radius: 0.5rem;
     transition: transform 0.3s;
 }
