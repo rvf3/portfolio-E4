@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+    <button class="theme-toggle" onclick="toggleTheme()">
+    <i class="uil uil-moon"></i>
+    </button>
     <aside class="sidebar" id="sidebar">
         <nav class="nav">
             <div class="nav__logo">
@@ -38,7 +41,7 @@
         <section class="home" id="home">
             <div class="home__container container grid">
                 <div class="home__img-container">
-                    <img src="assets/img/portfolio1.jpg" alt="Ma Photo" class="home__img">
+                    <img src="assets/img/portfolio-image.jpg" alt="Ma Photo" class="home__img">
                 </div>
                 <div class="home__data">
                     <h1 class="home__title">Je m'appelle Rafael Olivieri</h1>
@@ -47,23 +50,25 @@
                         Le BTS SIO (Services Informatiques aux Organisations) est un diplôme de niveau bac+2 dans le domaine de l'informatique.
                         Il forme des professionnels capables de prendre en charge les systèmes informatiques au sein d'une entreprise ou d'une organisation.
                     </p>
-                    <a href="#competences" class="button">
-                        <i class="uil uil-user button__icon"></i> En savoir plus sur moi
-                    </a>
+            <a class="pdf-cell" onclick="openPDF('assets/pdf/cv-portfolio.pdf')">
+                <button class="button">Curriculum Vitae</button>
+            </a>
                 </div>
             </div>
         </section>
 
         <!-- Section Compétences -->
-        <section class="competences section" id="competences">
+        <section class="competences_section" id="competences">
             <h2 class="section__title">Tableau de synthèse des compétences</h2>
             <div class="competences__container container">
-                <button class="button">Ouvrir le tableau E4</button>
-                <div class="competences__table">
+            <a class="pdf-cell" onclick="openPDF('assets/pdf/tableau-e4.pdf')">
+                <button class="button">Tableau E4</button>
+            </a>                
+            <div class="competences__table">
                     <table>
                         <thead>
                             <tr>
-                                <th>Réalisations professionnelles</th>
+                                <th></th>
                                 <th>Gérer le patrimoine informatique</th>
                                 <th>Répondre aux incidents et aux demandes d'assistance et d'évolution</th>
                                 <th>Développer la présence en ligne de l'organisation</th>
@@ -74,8 +79,11 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>TP SEO</td>
-                                <td><a href="path/to/your/pdf1.pdf" target="_blank">PDF</a></td>
+                                <td colspan="7">Réalisations en cours de formation</td>
+                            </tr>
+                            <tr>
+                                <td>.</td>
+                                <td class="pdf-cell" onclick="openPDF('assets/pdf/nom-du-fichier.pdf')"></td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
@@ -83,7 +91,7 @@
                                 <td></td>
                             </tr>
                             <tr>
-                                <td>TP WiFi</td>
+                                <td>.</td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
@@ -92,7 +100,7 @@
                                 <td><a href="path/to/your/pdf2.pdf" target="_blank">PDF</a></td>
                             </tr>
                             <tr>
-                                <td>Veille Informationnelle</td>
+                                <td>.</td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
@@ -104,34 +112,61 @@
                                 <td colspan="7">Réalisations en milieu professionnel en cours de première année</td>
                             </tr>
                             <tr>
-                                <td>GLPI</td>
-                                <td><a href="path/to/your/pdf4.pdf" target="_blank">PDF</a></td>
+                                <td>Analyser les objectifs et les modalités d’organisation d’un projet amélioration d'une carte interactive et création d'un CRM</td>
                                 <td></td>
                                 <td></td>
+                                <td></td>
+                                <td class="pdf-cell" onclick="openPDF('assets/pdf/analyser-objectifs.pdf')"></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Mettre en place son environnement d’apprentissage personnel avec Symfony</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="pdf-cell" onclick="openPDF('assets/pdf/environnement-apprentissage.pdf')"></td>
+                            </tr>
+                            <tr>
+                                <td>Traiter des demandes concernant les applications</td>
+                                <td></td>
+                                <td></td>
+                                <td class="pdf-cell" onclick="openPDF('assets/pdf/amelioration-application.pdf')"></td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
                             </tr>
                             <tr>
-                                <td>WDS-MDT</td>
+                                <td>Recenser et identifier les ressources numériques</td>
                                 <td></td>
-                                <td><a href="path/to/your/pdf5.pdf" target="_blank">PDF</a></td>
+                                <td class="pdf-cell" onclick="openPDF('assets/pdf/ressources-numeriques.pdf')"></td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
                             </tr>
-                            <tr>
-                                <td>EasyVista</td>
+                                                        <tr>
+                                <td>Exploiter des référentiels, normes et standards adoptés par le prestataire informatique</td>
+                                <td class="pdf-cell" onclick="openPDF('assets/pdf/normes-prestataire-informatique.pdf')"></td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
-                                <td><a href="path/to/your/pdf6.pdf" target="_blank">PDF</a></td>
                                 <td></td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td colspan="7">Réalisations en milieu professionnel en cours de seconde année</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
                             </tr>
                         </tbody>
                     </table>
@@ -143,84 +178,146 @@
         <section class="certifications section" id="certifications">
             <h2 class="section__title">Mes certifications</h2>
             <div class="certifications__container container grid">
-                <div class="certification__item">
-                    <a href="path/to/your/pdf7.pdf" target="_blank">
-                        <img src="assets/img/certification1.png" alt="Certification 1">
-                    </a>
-                </div>
-                <div class="certification__item">
-                    <a href="path/to/your/pdf8.pdf" target="_blank">
-                        <img src="assets/img/certification2.png" alt="Certification 2">
-                    </a>
-                </div>
-                <div class="certification__item">
-                    <a href="path/to/your/pdf9.pdf" target="_blank">
-                        <img src="assets/img/certification3.png" alt="Certification 3">
-                    </a>
-                </div>
-                <div class="certification__item">
-                    <a href="path/to/your/pdf10.pdf" target="_blank">
-                        <img src="assets/img/certification4.png" alt="Certification 4">
-                    </a>
-                </div>
-                <div class="certification__item">
-                    <a href="path/to/your/pdf11.pdf" target="_blank">
-                        <img src="assets/img/certification5.png" alt="Certification 5">
-                    </a>
-                </div>
-                <div class="certification__item">
-                    <a href="path/to/your/pdf12.pdf" target="_blank">
-                        <img src="assets/img/certification6.png" alt="Certification 6">
-                    </a>
-                </div>
-                <div class="certification__item">
-                    <a href="path/to/your/pdf13.pdf" target="_blank">
-                        <img src="assets/img/certification7.png" alt="Certification 7">
-                    </a>
-                </div>
-                <div class="certification__item">
-                    <a href="path/to/your/pdf14.pdf" target="_blank">
-                        <img src="assets/img/certification8.png" alt="Certification 8">
-                    </a>
-                </div>
-                <div class="certification__item">
-                    <a href="path/to/your/pdf15.pdf" target="_blank">
-                        <img src="assets/img/certification9.png" alt="Certification 9">
-                    </a>
-                </div>
-                                <div class="certification__item">
-                    <a href="path/to/your/pdf14.pdf" target="_blank">
-                        <img src="assets/img/certification10.png" alt="Certification 10">
-                    </a>
-                </div>
-                                <div class="certification__item">
-                    <a href="path/to/your/pdf14.pdf" target="_blank">
-                        <img src="assets/img/certification11.png" alt="Certification 11">
-                    </a>
-                </div>
-                                <div class="certification__item">
-                    <a href="path/to/your/pdf14.pdf" target="_blank">
-                        <img src="assets/img/certification12.png" alt="Certification 12">
-                    </a>
-                </div>
-                                <div class="certification__item">
-                    <a href="path/to/your/pdf14.pdf" target="_blank">
-                        <img src="assets/img/certification13.png" alt="Certification 13">
-                    </a>
-                </div>
-                                <div class="certification__item">
-                    <a href="path/to/your/pdf14.pdf" target="_blank">
-                        <img src="assets/img/certification14.png" alt="Certification 14">
-                    </a>
-                </div>
-                                                <div class="certification__item">
-                    <a href="path/to/your/pdf14.pdf" target="_blank">
-                        <img src="assets/img/certification15.webp" alt="Certification 15">
-                    </a>
-                </div>
+            <div class="certification__item" onclick="openPDF('assets/pdf/certificate_of_completion_php.pdf')">
+                <img src="assets/img/certification1.png" alt="Certification 1">
+            </div>
+                <div class="certification__item" onclick="openPDF('assets/pdf/certificate_of_completion_cyber_security.pdf')">
+                <img src="assets/img/certification2.png" alt="Certification 2">
+            </div>
+                <div class="certification__item" onclick="openPDF('assets/pdf/certificate_of_completion_laravel.pdf')">
+                <img src="assets/img/certification3.png" alt="Certification 3">
+            </div>
+                <div class="certification__item" onclick="openPDF('assets/pdf/certificate_of_completion_.pdf')">
+                <img src="assets/img/certification4.png" alt="Certification 4">
+            </div>
+                <div class="certification__item" onclick="openPDF('assets/pdf/certificate_of_completion_php.pdf')">
+                <img src="assets/img/certification5.png" alt="Certification 5">
+            </div>
+                <div class="certification__item" onclick="openPDF('assets/pdf/certificate_of_completion_php.pdf')">
+                <img src="assets/img/certification6.png" alt="Certification 6">
+            </div>
+                <div class="certification__item" onclick="openPDF('assets/pdf/certificate_of_completion_php.pdf')">
+                <img src="assets/img/certification7.png" alt="Certification 7">
+            </div>
+                <div class="certification__item" onclick="openPDF('assets/pdf/certificate_of_completion_php.pdf')">
+                <img src="assets/img/certification8.png" alt="Certification 8">
+            </div>
+                <div class="certification__item" onclick="openPDF('assets/pdf/certificate_of_completion_php.pdf')">
+                <img src="assets/img/certification9.png" alt="Certification 9">
+            </div>
+             <div class="certification__item" onclick="openPDF('assets/pdf/certificate_of_completion_php.pdf')">
+                <img src="assets/img/certification10.png" alt="Certification 10">
+            </div>
+            <div class="certification__item" onclick="openPDF('assets/pdf/certificate_of_completion_php.pdf')">
+                <img src="assets/img/certification11.png" alt="Certification 11">
+            </div>
+            <div class="certification__item" onclick="openPDF('assets/pdf/certificate_of_completion_php.pdf')">
+                <img src="assets/img/certification12.png" alt="Certification 12">
+            </div>
+            <div class="certification__item" onclick="openPDF('assets/pdf/certificate_of_completion_php.pdf')">
+                <img src="assets/img/certification13.png" alt="Certification 13">
+            </div>
+            <div class="certification__item" onclick="openPDF('assets/pdf/certificate_of_completion_php.pdf')">
+                <img src="assets/img/certification14.png" alt="Certification 14">
+            </div>
+            <div class="certification__item" onclick="openPDF('assets/pdf/certificate_of_completion_php.pdf')">
+                <img src="assets/img/certification15.webp" alt="Certification 15">
+            </div>
 
             </div>
         </section>
     </main>
+        
+<script>
+// Fonction pour changer de thème
+function toggleTheme() {
+    const body = document.body;
+    const themeToggle = document.querySelector('.theme-toggle i');
+    
+    if (body.getAttribute('data-theme') === 'light') {
+        body.removeAttribute('data-theme');
+        themeToggle.className = 'uil uil-moon';
+    } else {
+        body.setAttribute('data-theme', 'light');
+        themeToggle.className = 'uil uil-sun';
+    }
+}
+
+// Fonction pour ouvrir les PDFs dans un modal/iframe
+function openPDF(pdfPath) {
+    // Vérifier si un modal existe déjà
+    const existingModal = document.querySelector('.pdf-modal');
+    if (existingModal) {
+        document.body.removeChild(existingModal);
+    }
+    
+    // Créer un modal
+    const modal = document.createElement('div');
+    modal.className = 'pdf-modal';
+    modal.style.cssText = `
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.8);
+        z-index: 1000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    `;
+    
+    const iframe = document.createElement('iframe');
+    iframe.src = pdfPath;
+    iframe.style.cssText = `
+        width: 90%;
+        height: 90%;
+        border: none;
+        border-radius: 8px;
+        background-color: white;
+    `;
+    
+    const closeBtn = document.createElement('button');
+    closeBtn.innerHTML = '<i class="uil uil-times"></i>';
+    closeBtn.style.cssText = `
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        background: var(--skin-color);
+        color: var(--title-color);
+        border: none;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        font-size: 1.2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: .3s;
+    `;
+    
+    closeBtn.onmouseover = () => closeBtn.style.transform = 'scale(1.1)';
+    closeBtn.onmouseout = () => closeBtn.style.transform = 'scale(1)';
+    
+    closeBtn.onclick = () => document.body.removeChild(modal);
+    modal.onclick = (e) => {
+        if (e.target === modal) document.body.removeChild(modal);
+    };
+    
+    // Fermer avec Escape
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && document.querySelector('.pdf-modal')) {
+            document.body.removeChild(modal);
+        }
+    });
+    
+    modal.appendChild(iframe);
+    modal.appendChild(closeBtn);
+    document.body.appendChild(modal);
+}
+</script>
+
 </body>
 </html>

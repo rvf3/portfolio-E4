@@ -1,6 +1,5 @@
 /*=============== GOOGLE FONTS ===============*/
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
 /*=============== VARIABLES CSS ===============*/
 
 *,
@@ -266,6 +265,7 @@ input {
     align-items: center;
     gap: 2rem; /* Espace entre les colonnes */
     padding: 0 2rem; /* Ajoute un peu de padding pour éviter que le contenu ne touche les bords */
+    margin-bottom: auto;
 }
 
 .home__img-container {
@@ -273,7 +273,7 @@ input {
 }
 
 .home__img {
-    max-width: 100%; /* Assure que l'image ne dépasse pas la largeur de sa colonne */
+    max-width: 75%; /* Assure que l'image ne dépasse pas la largeur de sa colonne */
     border-radius: 0.5rem; /* Optionnel : ajoute des coins arrondis à l'image */
     height: auto; /* Conserve les proportions de l'image */
 }
@@ -324,6 +324,7 @@ input {
 
 
 .home__title {
+    margin-top: 10%;
     font-size: var(--biggest-font-size);
 }
 
@@ -526,9 +527,25 @@ input {
 }
 
 .competences__table th, .competences__table td {
-    border: 1px solid var(--box-color);
+    border: 1px solid white;
     padding: 0.75rem;
     text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.pdf-cell {
+    background-color: #4CAF50 !important;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    position: relative;
+}
+
+.pdf-cell:hover {
+    background-color: #45a049 !important;
+}
+
+.pdf-cell::after {
+    font-size: 1.2rem;
 }
 
 .competences__table th {
@@ -690,4 +707,176 @@ body::before {
 
 .certification__item img:hover {
     transform: scale(1.05);
+}
+
+
+.competences__table {
+    margin-top: 2rem;
+    overflow-x: auto;
+}
+
+.competences__table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.competences__table th, .competences__table td {
+    border: 1px solid white; /* Change la couleur de la bordure à blanc */
+    padding: 0.75rem;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Rendre les cases opaques */
+}
+
+.competences__table th {
+    background-color: rgba(0, 0, 0, 0.7); /* Rendre les en-têtes un peu plus opaques */
+}
+
+.competences__table a {
+    color: var(--skin-color);
+    text-decoration: none;
+}
+
+.competences__table a:hover {
+    text-decoration: underline;
+}
+
+:root {
+    --body-color: hsl(var(--hue-color), 19%, 5%);
+    --text-color: hsl(var(--hue-color), 8%, 85%);
+    --box-color: hsl(var(--hue-color), 14%, 10%);
+    /* autres variables */
+}
+
+/* Variables pour le mode clair - Palette Old Photograph */
+[data-theme="light"] {
+    --title-color: hsl(30, 15%, 25%);        /* Brun foncé pour les titres */
+    --text-color: hsl(35, 12%, 35%);         /* Brun moyen pour le texte */
+    --body-color: hsl(45, 25%, 92%);         /* Crème clair pour l'arrière-plan */
+    --box-color: hsl(40, 20%, 85%);          /* Beige moyen pour les boîtes */
+    --scroll-bar-color: hsl(35, 15%, 65%);   /* Beige pour la scrollbar */
+    --scroll-thumb-color: hsl(30, 20%, 45%); /* Olive pour le thumb */
+    --skin-color: hsl(25, 35%, 45%);         /* Olive profond pour l'accent */
+}
+
+/* Amélioration du tableau pour le mode clair */
+[data-theme="light"] .competences__table th,
+[data-theme="light"] .competences__table td {
+    border: 2px solid #2c3e50;
+    background-color: hsl(45, 30%, 96%);
+    color: hsl(30, 15%, 25%);
+}
+
+[data-theme="light"] .competences__table th {
+    background-color: hsl(40, 25%, 88%);
+    font-weight: 600;
+    color: hsl(25, 20%, 20%);
+}
+
+[data-theme="light"] .pdf-cell {
+    background-color: #27ae60 !important;
+    color: white !important;
+    font-weight: 500;
+}
+
+[data-theme="light"] .pdf-cell:hover {
+    background-color: #229954 !important;
+    box-shadow: 0 2px 8px rgba(39, 174, 96, 0.3);
+}
+
+/* Amélioration générale du tableau */
+.competences__table table {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.competences__table th {
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.85rem;
+}
+
+.competences__table td {
+    font-weight: 400;
+    transition: all 0.3s ease;
+}
+
+.competences__table tr:hover td {
+    background-color: var(--box-color);
+}
+
+[data-theme="light"] .competences__table tr:hover td {
+    background-color: hsl(40, 25%, 90%);
+}
+
+[data-theme="light"] .competences__table a {
+    color: hsl(25, 35%, 35%);
+    font-weight: 500;
+}
+
+[data-theme="light"] .competences__table a:hover {
+    color: var(--skin-color);
+    text-decoration: underline;
+}
+
+body {
+    background-color: var(--body-color);
+    color: var(--text-color);
+}
+
+.theme-toggle {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    background-color: var(--skin-color);
+    color: var(--title-color);
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    z-index: 1000;
+    transition: .3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+}
+
+.theme-toggle i {
+    font-size: 1.2rem;
+}
+
+.certification__item {
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.certification__item:hover {
+    transform: scale(1.05);
+}
+
+.certification__item img {
+    width: 100px;
+    height: 100px;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.certification__item img:hover {
+    transform: scale(1.1);
+    border-color: var(--skin-color);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="light"] .certification__item img:hover {
+    box-shadow: 0 4px 15px rgba(39, 174, 96, 0.3);
 }

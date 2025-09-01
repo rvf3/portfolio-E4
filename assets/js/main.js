@@ -1,21 +1,15 @@
-// Wrap every letter in a span
-var textWrapper = document.querySelector('.ml7 .letters');
-textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+<script>
+    const themeToggleButton = document.getElementById('theme-toggle');
+    const body = document.body;
 
-anime.timeline({loop: true})
-  .add({
-    targets: '.ml7 .letter',
-    translateY: ["1.1em", 0],
-    translateX: ["0.55em", 0],
-    translateZ: 0,
-    rotateZ: [180, 0],
-    duration: 750,
-    easing: "easeOutExpo",
-    delay: (el, i) => 50 * i
-  }).add({
-    targets: '.ml7',
-    opacity: 0,
-    duration: 1000,
-    easing: "easeOutExpo",
-    delay: 1000
-  });
+    themeToggleButton.addEventListener('click', () => {
+        const currentTheme = body.getAttribute('data-theme');
+        if (currentTheme === 'light') {
+            body.removeAttribute('data-theme');
+            themeToggleButton.textContent = 'Mode Clair';
+        } else {
+            body.setAttribute('data-theme', 'light');
+            themeToggleButton.textContent = 'Mode Sombre';
+        }
+    });
+</script>
