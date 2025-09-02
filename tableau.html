@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau des Compétences - Rafael Olivieri</title>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="assets/css/tableau.css">
+</head>
+<body>
+    <button class="theme-toggle" onclick="toggleTheme()">
+        <i class="uil uil-moon"></i>
+    </button>
+
+    <header class="header">
+        <nav class="nav">
+            <a href="#" class="nav__logo">RO</a>
+            <a href="index.html" class="nav__back">
+                <i class="uil uil-arrow-left"></i>
+                Retour à l'accueil
+            </a>
+        </nav>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <div class="page-header">
+                <h1 class="page-title">Tableau des Compétences</h1>
+                <p class="page-subtitle">Synthèse de mes réalisations en formation et en milieu professionnel</p>
+                
+                <div class="action-buttons">
+                    <button class="button" onclick="openPDF('assets/pdf/tableau-e4.pdf')">
+                        <i class="uil uil-file-alt"></i>
+                        Consulter le tableau E4
+                    </button>
+                </div>
+            </div>
+
+            <div class="table-container">
+                <table class="competences-table">
+                    <thead>
+                        <tr>
+                            <th style="min-width: 250px;">Compétences / Réalisations</th>
+                            <th>Gérer le patrimoine informatique</th>
+                            <th>Répondre aux incidents et aux demandes d'assistance et d'évolution</th>
+                            <th>Développer la présence en ligne de l'organisation</th>
+                            <th>Travailler en mode projet</th>
+                            <th>Mettre à disposition des utilisateurs un service informatique</th>
+                            <th>Organiser son développement professionnel</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="7">Réalisations en cours de formation</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td colspan="7">Réalisations en milieu professionnel en cours de première année</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left; font-weight: 500;">Analyser les objectifs et les modalités d'organisation d'un projet amélioration d'une carte interactive et création d'un CRM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td class="pdf-cell" onclick="openPDF('assets/pdf/analyser-objectifs.pdf')">✓</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left; font-weight: 500;">Mettre en place son environnement d'apprentissage personnel avec Symfony</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td class="pdf-cell" onclick="openPDF('assets/pdf/environnement-apprentissage.pdf')">✓</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left; font-weight: 500;">Traiter des demandes concernant les applications</td>
+                            <td></td>
+                            <td></td>
+                            <td class="pdf-cell" onclick="openPDF('assets/pdf/amelioration-application.pdf')">✓</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left; font-weight: 500;">Recenser et identifier les ressources numériques</td>
+                            <td></td>
+                            <td class="pdf-cell" onclick="openPDF('assets/pdf/ressources-numeriques.pdf')">✓</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left; font-weight: 500;">Exploiter des référentiels, normes et standards adoptés par le prestataire informatique</td>
+                            <td class="pdf-cell" onclick="openPDF('assets/pdf/normes-prestataire-informatique.pdf')">✓</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td colspan="7">Réalisations en milieu professionnel en cours de seconde année</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center; font-style: italic; opacity: 0.7;">À compléter au cours de la formation...</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Fonction pour changer de thème
+        function toggleTheme() {
+            const body = document.body;
+            const themeToggle = document.querySelector('.theme-toggle i');
+            
+            if (body.getAttribute('data-theme') === 'light') {
+                body.removeAttribute('data-theme');
+                themeToggle.className = 'uil uil-moon';
+            } else {
+                body.setAttribute('data-theme', 'light');
+                themeToggle.className = 'uil uil-sun';
+            }
+        }
+
+        // Fonction pour ouvrir les PDFs
+        function openPDF(pdfPath) {
+            const existingModal = document.querySelector('.pdf-modal');
+            if (existingModal) {
+                document.body.removeChild(existingModal);
+            }
+            
+            const modal = document.createElement('div');
+            modal.className = 'pdf-modal';
+            modal.style.cssText = `
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0,0,0,0.9);
+                z-index: 1000;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 20px;
+                backdrop-filter: blur(5px);
+            `;
+            
+            const iframe = document.createElement('iframe');
+            iframe.src = pdfPath;
+            iframe.style.cssText = `
+                width: 90%;
+                height: 90%;
+                border: none;
+                border-radius: 1rem;
+                background-color: white;
+                box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+            `;
+            
+            const closeBtn = document.createElement('button');
+            closeBtn.innerHTML = '<i class="uil uil-times"></i>';
+            closeBtn.style.cssText = `
+                position: absolute;
+                top: 30px;
+                right: 30px;
+                background: var(--skin-color);
+                color: white;
+                border: none;
+                border-radius: 50%;
+                width: 50px;
+                height: 50px;
+                cursor: pointer;
+                font-size: 1.5rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: all 0.3s ease;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            `;
+            
+            closeBtn.onmouseover = () => {
+                closeBtn.style.transform = 'scale(1.1)';
+                closeBtn.style.background = '#e74c3c';
+            };
+            closeBtn.onmouseout = () => {
+                closeBtn.style.transform = 'scale(1)';
+                closeBtn.style.background = 'var(--skin-color)';
+            };
+            
+            closeBtn.onclick = () => document.body.removeChild(modal);
+            modal.onclick = (e) => {
+                if (e.target === modal) document.body.removeChild(modal);
+            };
+            
+            // Fermer avec Escape
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && document.querySelector('.pdf-modal')) {
+                    document.body.removeChild(modal);
+                }
+            });
+            
+            modal.appendChild(iframe);
+            modal.appendChild(closeBtn);
+            document.body.appendChild(modal);
+        }
+
+        // Animation d'apparition des cellules au survol
+        document.querySelectorAll('.pdf-cell').forEach(cell => {
+            cell.addEventListener('mouseenter', function() {
+                this.style.transform = 'scale(1.05)';
+            });
+            
+            cell.addEventListener('mouseleave', function() {
+                this.style.transform = 'scale(1)';
+            });
+        });
+    </script>
+</body>
+</html>

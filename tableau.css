@@ -1,0 +1,363 @@
+        /*=============== GOOGLE FONTS ===============*/
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+        /*=============== VARIABLES CSS ===============*/
+        :root {
+            --hue-color: 242;
+            --skin-color: hsl(342, 92%, 46%);
+            --title-color: hsl(var(--hue-color), 8%, 95%);
+            --text-color: hsl(var(--hue-color), 8%, 85%);
+            --body-color: hsl(var(--hue-color), 19%, 5%);
+            --box-color: hsl(var(--hue-color), 14%, 10%);
+            --accent-color: hsl(120, 60%, 50%);
+            --gradient-bg: linear-gradient(135deg, hsl(25, 100%, 70%) 0%, hsl(35, 95%, 75%) 100%);
+            
+            --body-font: 'Inter', sans-serif;
+            --biggest-font-size: 3rem;
+            --h1-font-size: 2.5rem;
+            --h2-font-size: 1.8rem;
+            --normal-font-size: 1rem;
+            --small-font-size: .875rem;
+            
+            --font-medium: 500;
+            --font-bold: 600;
+            --font-black: 700;
+        }
+
+        /* Mode clair */
+        [data-theme="light"] {
+            --title-color: hsl(30, 15%, 25%);
+            --text-color: hsl(35, 12%, 35%);
+            --body-color: hsl(45, 25%, 96%);
+            --box-color: hsl(40, 20%, 90%);
+            --skin-color: hsl(25, 35%, 45%);
+            --accent-color: hsl(120, 50%, 40%);
+        }
+
+        /*=============== BASE ===============*/
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--body-font);
+            background-color: var(--body-color);
+            color: var(--text-color);
+            transition: all 0.3s ease;
+            min-height: 100vh;
+        }
+
+        /*=============== HEADER ===============*/
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(20px);
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .nav__logo {
+            font-size: 2rem;
+            font-weight: var(--font-black);
+            color: var(--title-color);
+            text-decoration: none;
+        }
+
+        .nav__back {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: var(--font-medium);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .nav__back:hover {
+            color: var(--skin-color);
+        }
+
+        /*=============== MAIN CONTENT ===============*/
+        .main {
+            padding-top: 100px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .page-title {
+            font-size: var(--biggest-font-size);
+            font-weight: var(--font-black);
+            color: var(--title-color);
+            margin-bottom: 1rem;
+            background: var(--gradient-bg);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .page-subtitle {
+            font-size: var(--h2-font-size);
+            color: var(--text-color);
+            margin-bottom: 2rem;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-bottom: 3rem;
+        }
+
+        .button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--skin-color);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-weight: var(--font-medium);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        /*=============== TABLE STYLES ===============*/
+        .table-container {
+            background: var(--box-color);
+            border-radius: 2rem;
+            padding: 2rem;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+            overflow-x: auto;
+            margin-bottom: 3rem;
+        }
+
+        .competences-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: var(--small-font-size);
+        }
+
+        .competences-table th,
+        .competences-table td {
+            border: 2px solid var(--title-color);
+            padding: 1rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            background-color: var(--box-color);
+        }
+
+        .competences-table th {
+            background: var(--gradient-bg);
+            color: var(--title-color);
+            font-weight: var(--font-bold);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.8rem;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        [data-theme="light"] .competences-table th {
+            background: linear-gradient(135deg, hsl(45, 85%, 88%) 0%, hsl(40, 80%, 92%) 100%);
+            color: var(--title-color);
+        }
+
+        .competences-table td {
+            background-color: var(--body-color);
+            color: var(--text-color);
+        }
+
+        /* Section headers */
+        .competences-table tbody tr:first-child td,
+        .competences-table tbody tr:nth-child(3) td,
+        .competences-table tbody tr:nth-child(10) td {
+            background: var(--skin-color);
+            color: white;
+            font-weight: var(--font-bold);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* PDF Cells */
+        .pdf-cell {
+            background: var(--accent-color) !important;
+            color: white !important;
+            cursor: pointer;
+            position: relative;
+            font-weight: var(--font-bold);
+            transition: all 0.3s ease;
+        }
+
+        .pdf-cell:hover {
+            background: hsl(120, 70%, 45%) !important;
+            transform: scale(1.02);
+            box-shadow: 0 4px 15px rgba(76, 175, 80, 0.4);
+        }
+
+        .pdf-cell::before {
+            content: '📄';
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            font-size: 0.8rem;
+        }
+
+        /* Mode clair pour le tableau */
+        [data-theme="light"] .competences-table th,
+        [data-theme="light"] .competences-table td {
+            border-color: var(--title-color);
+        }
+
+        [data-theme="light"] .competences-table td {
+            background-color: hsl(45, 30%, 96%);
+            color: var(--text-color);
+        }
+
+        [data-theme="light"] .pdf-cell {
+            background: #27ae60 !important;
+            color: white !important;
+        }
+
+        [data-theme="light"] .pdf-cell:hover {
+            background: #229954 !important;
+        }
+
+        /* Hover effects */
+        .competences-table tr:hover td:not(.pdf-cell) {
+            background-color: var(--skin-color);
+            color: white;
+        }
+
+        [data-theme="light"] .competences-table tr:hover td:not(.pdf-cell) {
+            background-color: var(--skin-color);
+            color: white;
+        }
+
+        /*=============== THEME TOGGLE ===============*/
+        .theme-toggle {
+            position: fixed;
+            top: 2rem;
+            right: 2rem;
+            background: var(--skin-color);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            z-index: 1001;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+
+        .theme-toggle:hover {
+            transform: scale(1.1) rotate(180deg);
+        }
+
+        /*=============== RESPONSIVE ===============*/
+        @media screen and (max-width: 1024px) {
+            :root {
+                --biggest-font-size: 2.5rem;
+                --h2-font-size: 1.5rem;
+            }
+
+            .table-container {
+                padding: 1rem;
+                border-radius: 1rem;
+            }
+
+            .competences-table th,
+            .competences-table td {
+                padding: 0.5rem;
+                font-size: 0.75rem;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .container {
+                padding: 0 1rem;
+            }
+
+            .action-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .competences-table {
+                font-size: 0.7rem;
+            }
+
+            .competences-table th,
+            .competences-table td {
+                padding: 0.3rem;
+            }
+        }
+
+        @media screen and (max-width: 576px) {
+            :root {
+                --biggest-font-size: 2rem;
+            }
+
+            .nav {
+                padding: 0 1rem;
+            }
+
+            .page-title {
+                font-size: 2rem;
+            }
+        }
+
+        /*=============== ANIMATIONS ===============*/
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .table-container {
+            animation: slideIn 0.6s ease-out;
+        }
+
+        .page-header {
+            animation: slideIn 0.4s ease-out;
+        }
