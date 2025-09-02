@@ -10,8 +10,7 @@
             --body-color: hsl(var(--hue-color), 19%, 5%);
             --box-color: hsl(var(--hue-color), 14%, 10%);
             --accent-color: hsl(120, 60%, 50%);
-            --gradient-bg: linear-gradient(135deg, hsl(25, 100%, 70%) 0%, hsl(35, 95%, 75%) 100%);
-            
+            --skin-color: hsl(45, 100%, 50%);            
             --body-font: 'Inter', sans-serif;
             --biggest-font-size: 3rem;
             --h1-font-size: 2.5rem;
@@ -203,7 +202,6 @@
         .competences-table tbody tr:first-child td,
         .competences-table tbody tr:nth-child(3) td,
         .competences-table tbody tr:nth-child(10) td {
-            background: var(--skin-color);
             color: white;
             font-weight: var(--font-bold);
             text-transform: uppercase;
@@ -217,7 +215,7 @@
             cursor: pointer;
             position: relative;
             font-weight: var(--font-bold);
-            transition: all 0.3s ease;
+            transition: all 0.1s ease;
         }
 
         .pdf-cell:hover {
@@ -227,7 +225,6 @@
         }
 
         .pdf-cell::before {
-            content: '📄';
             position: absolute;
             top: 5px;
             right: 5px;
