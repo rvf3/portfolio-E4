@@ -19,10 +19,7 @@
             <a href="#home" class="nav__logo">OR</a>
             <div class="nav__menu">
                 <a href="#home" class="nav__link active">Accueil</a>
-                <a href="#about" class="nav__link">À propos</a>
-                <a href="#competences" class="nav__link">Compétences</a>
                 <a href="tableau.html" class="nav__link">Tableau</a>
-                <a href="#certifications" class="nav__link">Certifications</a>
             </div>
         </nav>
     </header>
@@ -53,58 +50,26 @@
 
         <!-- Cards Section -->
         <section class="cards" id="about">
-            <div class="container">
-                <div class="cards__grid">
-                    <div class="card">
-                        <h3 class="card__subtitle">Formation</h3>
-                        <h2 class="card__title">À propos</h2>
+                <div class="container">
+                    <div class="card" id="certifications">
+                        <h2 class="card__title">Formation</h2>
                         <p class="card__text">
-                            Le BTS SIO (Services Informatiques aux Organisations) est un diplôme de niveau bac+2 
-                            dans le domaine de l'informatique. Il forme des professionnels capables de prendre en 
-                            charge les systèmes informatiques au sein d'une entreprise.
+                            Plus de 15 certifications obtenues dans différentes institutions : W3School, Redhat 
+                            et Cisco
                         </p>
-                        <a href="#competences" class="button">Voir mes compétences</a>
-                    </div>
-
-                    <div class="card card__large" id="competences">
-                        <h3 class="card__subtitle">Technologies</h3>
-                        <h2 class="card__title">Compétences</h2>
-                        <p class="card__text">
-                            Découvrez les technologies et langages que je maîtrise à travers ma formation 
-                            et mes projets personnels.
-                        </p>
-                        <div class="competences__preview">
-                            <div class="skill__item">PHP</div>
-                            <div class="skill__item">Python</div>
-                            <div class="skill__item">JavaScript</div>
-                            <div class="skill__item">MySQL</div>
-                            <div class="skill__item">Java</div>
-                            <div class="skill__item">C#</div>
-                            <div class="skill__item">Laravel</div>
-                            <div class="skill__item">Symfony</div>
-                        </div>
+                        <a href="#certifications-section" class="button">Voir les certifications</a>
                     </div>
                 </div>
+            </div>
+        </br>
+        </br>
 
-                <div class="cards__grid" style="margin-top: 3rem;">
-                    <div class="card card__large" id="tableau">
-                        <h3 class="card__subtitle">E4</h3>
-                        <h2 class="card__title">Tableau des compétences</h2>
-                        <p class="card__text">
-                            Consultez mon tableau de synthèse des compétences détaillant mes réalisations 
-                            en formation et en milieu professionnel.
-                        </p>
-                        <button class="button" onclick="openPDF('assets/pdf/tableau-e4.pdf')">
-                            Voir le tableau E4
-                        </button>
-                    </div>
-
+            <div class="container">
                     <div class="card" id="certifications">
-                        <h3 class="card__subtitle">Formations</h3>
                         <h2 class="card__title">Certifications</h2>
                         <p class="card__text">
-                            Plus de 15 certifications obtenues dans différents domaines : développement web, 
-                            cybersécurité, bases de données, et bien plus encore.
+                            Plus de 15 certifications obtenues dans différentes institutions : W3School, Redhat, l'ANSSI 
+                            et Cisco
                         </p>
                         <a href="#certifications-section" class="button">Voir les certifications</a>
                     </div>
@@ -113,12 +78,12 @@
         </section>
 
         <!-- Section Certifications (conservée du code original) -->
-        <section class="certifications section" id="certifications-section" style="padding: 6rem 0; background: var(--box-color);">
+        <section class="certifications section" id="certifications-section" style="padding: 6rem 0; background: var(--box-color);align-items: center;">
             <div class="container">
                 <h2 class="section__title" style="text-align: center; font-size: var(--h1-font-size); margin-bottom: var(--mb-3); color: var(--title-color);">
                     Mes certifications
                 </h2>
-                <div class="certifications__container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 2rem; margin-top: 3rem;">
+                <div class="certifications__container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 2rem; margin-top: 3rem;align-items: center;">
                     
                     <div class="certification__item" onclick="openPDF('assets/pdf/certifications/certificate_of_completion_php.pdf')" style="text-align: center; cursor: pointer; transition: transform 0.3s ease;">
                         <img src="assets/img/certification1.png" alt="Certification PHP" style="width: 100px; height: 100px; border-radius: 0.5rem; transition: all 0.3s ease; border: 2px solid transparent;">
@@ -180,6 +145,9 @@
                         <img src="assets/img/certification15.webp" alt="Certification jQuery" style="width: 100px; height: 100px; border-radius: 0.5rem; transition: all 0.3s ease; border: 2px solid transparent;">
                     </div>
 
+                    <div class="certification__item" onclick="openPDF('assets/pdf/certifications/certificate_of_completion_jquery.pdf')">
+                        <img src="assets/img/certification16.png" alt="Certification jQuery" style="width: 100px; height: 100px; border-radius: 0.5rem; transition: all 0.3s ease; border: 2px solid transparent;">
+                    </div>
                 </div>
             </div>
         </section>
