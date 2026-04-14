@@ -367,7 +367,7 @@
         /*=============== THEME TOGGLE ===============*/
         .theme-toggle {
             position: fixed;
-            top: 2rem;
+            bottom: 2rem;
             right: 2rem;
             background: var(--skin-color);
             color: white;
