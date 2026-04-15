@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accès Restreint - Rafael Olivieri</title>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="assets/css/login.css">
+</head>
+<body>
+    <main class="login-container">
+        <div class="login-card">
+            <div class="login-icon">
+                <i class="uil uil-lock"></i>
+            </div>
+            <h1 class="login-title">Espace Sécurisé</h1>
+            <p class="login-text">Veuillez saisir le code d'accès pour consulter le portfolio de Rafael Olivieri.</p>
+            
+            <div class="input-group">
+                <input type="password" id="password" class="login-input" placeholder="Mot de passe">
+                <p id="error" class="error-message">Code incorrect. Veuillez réessayer.</p>
+            </div>
+            
+            <button class="login-button" onclick="checkPassword()">
+                <i class="uil uil-sign-in-alt"></i>
+                Se connecter
+            </button>
+        </div>
+    </main>
+
+    <script>
+        function checkPassword() {
+            const password = document.getElementById('password').value;
+            const error = document.getElementById('error');
+            
+            // Note : Ce mot de passe est visible dans le code source (côté client).
+            if (password === 'SIO2026') { 
+                window.location.href = "index.html";
+            } else {
+                error.style.display = 'block';
+                document.getElementById('password').value = '';
+            }
+        }
+
+        document.getElementById('password').addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                checkPassword();
+            }
+        });
+    </script>
+</body>
+</html>

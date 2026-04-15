@@ -1,0 +1,108 @@
+/* Utilisation de vos variables globales */
+:root {
+    --hue-color: 242;
+    --skin-color: hsl(45, 100%, 50%);
+    --title-color: hsl(var(--hue-color), 8%, 95%);
+    --text-color: hsl(var(--hue-color), 8%, 85%);
+    --body-color: hsl(var(--hue-color), 19%, 5%);
+    --box-color: hsl(var(--hue-color), 14%, 10%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--body-color);
+    color: var(--text-color);
+}
+
+.login-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.login-card {
+    background: var(--box-color);
+    padding: 3rem 2rem;
+    border-radius: 1.5rem;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    max-width: 450px;
+    width: 100%;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+.login-icon {
+    font-size: 3rem;
+    color: var(--skin-color);
+    margin-bottom: 1rem;
+}
+
+.login-title {
+    font-size: 1.8rem;
+    color: var(--title-color);
+    margin-bottom: 0.5rem;
+}
+
+.login-text {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.input-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.login-input {
+    width: 100%;
+    padding: 1.2rem;
+    border-radius: 0.8rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: var(--body-color);
+    color: var(--title-color);
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+.login-input:focus {
+    border-color: var(--skin-color);
+}
+
+.error-message {
+    color: #ff4d4d;
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+    display: none;
+}
+
+.login-button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background: var(--skin-color);
+    color: #000;
+    padding: 1.2rem;
+    border-radius: 0.8rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.login-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    filter: brightness(1.1);
+}
