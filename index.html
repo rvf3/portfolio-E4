@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+
+    <script>
+    // Vérification immédiate de la session
+    if (sessionStorage.getItem('authSIO') !== 'valide') {
+        // Si la clé n'est pas là, on renvoie vers la page de login
+        window.location.replace("index.html");
+    }
+</script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accès Restreint - Rafael Olivieri</title>
@@ -28,14 +37,18 @@
         </div>
     </main>
 
-    <script>
+<script>
         function checkPassword() {
             const password = document.getElementById('password').value;
             const error = document.getElementById('error');
             
-            // Note : Ce mot de passe est visible dans le code source (côté client).
             if (password === 'SIO2026') { 
-                window.location.href = "index.html";
+                // Enregistre l'état de connexion dans la session du navigateur
+                sessionStorage.setItem('authSIO', 'valide');
+                
+                // Redirige vers le portfolio en remplaçant l'historique
+                // Attention : mettez bien le nouveau nom de votre page portfolio ici
+                window.location.replace("portfolio.html"); 
             } else {
                 error.style.display = 'block';
                 document.getElementById('password').value = '';
