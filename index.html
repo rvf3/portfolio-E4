@@ -2,329 +2,49 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rafael Olivieri - Portfolio</title>
+    <title>Accès Restreint - Rafael Olivieri</title>
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/login.css">
 </head>
 <body>
-    <button class="theme-toggle" onclick="toggleTheme()">
-        <i class="uil uil-moon"></i>
-    </button>
-
-    <header class="header">
-        <nav class="nav container">
-            <a href="#home" class="nav__logo">OR</a>
-            <div class="nav__menu">
-                <a href="#home" class="nav__link active">Accueil</a>
-                <a href="tableau.html" class="nav__link">Tableau</a>
+    <main class="login-container">
+        <div class="login-card">
+            <div class="login-icon">
+                <i class="uil uil-lock"></i>
             </div>
-        </nav>
-    </header>
-
-    <main>
-        <!-- Hero Section -->
-        <section class="hero" id="home">
-            <div class="hero__container container">
-                <div class="hero__content">
-                    <h1 class="hero__title">RAFAEL OLIVIERI</h1>
-                    <h2 class="hero__subtitle">Étudiant en BTS SIO</h2>
-                    <p class="hero__description">
-                        Passionné par la cybersécurité et le développement informatique, je me forme aux technologies modernes 
-                        pour devenir un professionnel compétent dans le domaine de la cybersécurité.
-                    </p>
-                    <div class="hero__cta">
-                        <a href="#about" class="button">En savoir plus</a>
-                        <button class="button button--outline" onclick="openPDF('assets/pdf/cv-ats.pdf')">
-                            Mon CV
-                        </button>
-                    </div>
-                </div>
-                <div class="hero__image">
-                    <img src="assets/img/portfolio-image.jpg" alt="Rafael Olivieri" class="hero__img">
-                </div>
+            <h1 class="login-title">Espace Sécurisé</h1>
+            <p class="login-text">Veuillez saisir le code d'accès pour consulter le portfolio de Rafael Olivieri.</p>
+            
+            <div class="input-group">
+                <input type="password" id="password" class="login-input" placeholder="Mot de passe">
+                <p id="error" class="error-message">Code incorrect. Veuillez réessayer.</p>
             </div>
-        </section>
-
-        <!-- Cards Section -->
-        <section class="cards" id="about">
-                <div class="container">
-                    <div class="card" id="certifications">
-                        <h2 class="card__title">Formation</h2>
-                        <h3 class="card__text">
-Actuellement en deuxième année de BTS SIO option SLAM, j'ai effectué mon stage de première année chez Wess Soft et celui de seconde année au CNRS. Ces expériences ont fortement ancré mon intérêt pour l'informatique technique.
-    </br></br>
-    Récemment admis en filière ingénieur cybersécurité à CPE Lyon, je vais pouvoir poursuivre ma formation dans un domaine qui me passionne, mêlant logique, développement et architecture réseau.
-    </br></br>
-    La cybersécurité représente pour moi un véritable défi intellectuel, avec des enjeux concrets et évolutifs. Mon objectif est de devenir ingénieur dans ce secteur afin de contribuer activement à la protection des systèmes d'information.
-                        </h3>
-                    </div>
-                </div>
-            </div>
-        </br>
-        </br>
-
-            <div class="container">
-                    <div class="card" id="certifications">
-                        <h2 class="card__title">Certifications</h2>
-                        <h3 class="card__text">
-                            Plus de 15 certifications obtenues dans différentes institutions : W3School, Redhat, l'ANSSI 
-                            et Cisco
-                        </h3>
-                        <a href="#certifications-section" class="button">Voir les certifications</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section Certifications (conservée du code original) -->
-        <section class="certifications section" id="certifications-section" style="padding: 6rem 0; background: var(--box-color);align-items: center;">
-            <div class="container">
-                <h2 class="section__title" style="text-align: center; font-size: var(--h1-font-size); margin-bottom: var(--mb-3); color: var(--title-color);">
-                    Mes certifications
-                </h2>
-                <div class="certifications__container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 2rem; margin-top: 3rem;align-items: center;">
-                    
-                    <div class="certification__item" onclick="openPDF('assets/pdf/certifications/certificate_of_completion_php.pdf')" style="text-align: center; cursor: pointer; transition: transform 0.3s ease;">
-                        <img src="assets/img/certification1.png" alt="Certification PHP" style="width: 100px; height: 100px; border-radius: 0.5rem; transition: all 0.3s ease; border: 2px solid transparent;">
-                    </div>
-
-                    <div class="certification__item" onclick="openPDF('assets/pdf/certifications/certificate_of_completion_python.pdf')">
-                        <img src="assets/img/certification2.png" alt="Certification Python" style="width: 100px; height: 100px; border-radius: 0.5rem; transition: all 0.3s ease; border: 2px solid transparent;">
-                    </div>
-
-                    <div class="certification__item" onclick="openPDF('assets/pdf/certifications/cshrap.pdf')">
-                        <img src="assets/img/certification3.png" alt="Certification C#" style="width: 100px; height: 100px; border-radius: 0.5rem; transition: all 0.3s ease; border: 2px solid transparent;">
-                    </div>
-
-                    <div class="certification__item" onclick="openPDF('assets/pdf/certifications/certificate_of_completion_cyber_security.pdf')">
-                        <img src="assets/img/certification4.png" alt="Certification Cybersécurité" style="width: 100px; height: 100px; border-radius: 0.5rem; transition: all 0.3s ease; border: 2px solid transparent;">
-                    </div>
-
-                    <div class="certification__item" onclick="openPDF('assets/pdf/certifications/certificate_of_completion_java.pdf')">
-                        <img src="assets/img/certification5.png" alt="Certification Java" style="width: 100px; height: 100px; border-radius: 0.5rem; transition: all 0.3s ease; border: 2px solid transparent;">
-                    </div>
-
-                    <div class="certification__item" onclick="openPDF('assets/pdf/certifications/certificate_of_completion_javascript.pdf')">
-                        <img src="assets/img/certification6.png" alt="Certification JavaScript" style="width: 100px; height: 100px; border-radius: 0.5rem; transition: all 0.3s ease; border: 2px solid transparent;">
-                    </div>
-
-                    <div class="certification__item" onclick="openPDF('assets/pdf/certifications/certificate_of_completion_laravel.pdf')">
-                        <img src="assets/img/certification7.png" alt="Certification Laravel" style="width: 100px; height: 100px; border-radius: 0.5rem; transition: all 0.3s ease; border: 2px solid transparent;">
-                    </div>
-
-                    <div class="certification__item" onclick="openPDF('assets/pdf/certifications/certificate_of_completion_mysql.pdf')">
-                        <img src="assets/img/certification8.png" alt="Certification MySQL" style="width: 100px; height: 100px; border-radius: 0.5rem; transition: all 0.3s ease; border: 2px solid transparent;">
-                    </div>
-
-                    <div class="certification__item" onclick="openPDF('assets/pdf/certifications/certificate_of_completion_sql.pdf')">
-                        <img src="assets/img/certification9.png" alt="Certification SQL" style="width: 100px; height: 100px; border-radius: 0.5rem; transition: all 0.3s ease; border: 2px solid transparent;">
-                    </div>
-
-                    <div class="certification__item" onclick="openPDF('assets/pdf/certifications/ComputerHardwareBasicsUpdate20250406-25-n6sxxl.pdf')">
-                        <img src="assets/img/certification10.png" alt="Certification Hardware" style="width: 100px; height: 100px; border-radius: 0.5rem; transition: all 0.3s ease; border: 2px solid transparent;">
-                    </div>
-
-                    <div class="certification__item" onclick="openPDF('assets/pdf/certifications/I2CSUpdate20250406-26-bhsre6.pdf')">
-                        <img src="assets/img/certification11.png" alt="Certification I2CS" style="width: 100px; height: 100px; border-radius: 0.5rem; transition: all 0.3s ease; border: 2px solid transparent;">
-                    </div>
-
-                    <div class="certification__item" onclick="openPDF('assets/pdf/certifications/IntrotoIoTUpdate20250406-26-s0d591.pdf')">
-                        <img src="assets/img/certification12.png" alt="Certification IoT" style="width: 100px; height: 100px; border-radius: 0.5rem; transition: all 0.3s ease; border: 2px solid transparent;">
-                    </div>
-
-                    <div class="certification__item" onclick="openPDF('assets/pdf/certifications/PythonEssentials1Update20250406-29-l3ekyz.pdf')">
-                        <img src="assets/img/certification13.png" alt="Certification Python Essentials" style="width: 100px; height: 100px; border-radius: 0.5rem; transition: all 0.3s ease; border: 2px solid transparent;">
-                    </div>
-
-                    <div class="certification__item" onclick="openPDF('assets/pdf/certifications/RedHatTrainingGettingStartedwithLinuxFundamentalsRH104-RHA-Ver.9.1_Badge20250406-25-xgd0aw.pdf')">
-                        <img src="assets/img/certification14.png" alt="Certification Red Hat Linux" style="width: 100px; height: 100px; border-radius: 0.5rem; transition: all 0.3s ease; border: 2px solid transparent;">
-                    </div>
-                    
-                    <div class="certification__item" onclick="openPDF('assets/pdf/certifications/certificate_of_completion_jquery.pdf')">
-                        <img src="assets/img/certification15.webp" alt="Certification jQuery" style="width: 100px; height: 100px; border-radius: 0.5rem; transition: all 0.3s ease; border: 2px solid transparent;">
-                    </div>
-
-                    <div class="certification__item" onclick="openPDF('assets/pdf/certifications/')">
-                        <img src="assets/img/certification16.png" alt="Certification ANSSI" style="width: 100px; height: 100px; border-radius: 0.5rem; transition: all 0.3s ease; border: 2px solid transparent;">
-                    </div>
-                </div>
-            </div>
-        </section>
+            
+            <button class="login-button" onclick="checkPassword()">
+                <i class="uil uil-sign-in-alt"></i>
+                Se connecter
+            </button>
+        </div>
     </main>
 
     <script>
-        // Fonction pour changer de thème
-        function toggleTheme() {
-            const body = document.body;
-            const themeToggle = document.querySelector('.theme-toggle i');
+        function checkPassword() {
+            const password = document.getElementById('password').value;
+            const error = document.getElementById('error');
             
-            if (body.getAttribute('data-theme') === 'light') {
-                body.removeAttribute('data-theme');
-                themeToggle.className = 'uil uil-moon';
+            // Note : Ce mot de passe est visible dans le code source (côté client).
+            if (password === 'SIO2026') { 
+                window.location.href = "index.html";
             } else {
-                body.setAttribute('data-theme', 'light');
-                themeToggle.className = 'uil uil-sun';
+                error.style.display = 'block';
+                document.getElementById('password').value = '';
             }
         }
 
-        // Navigation active link
-        const sections = document.querySelectorAll('section[id]');
-        const navLinks = document.querySelectorAll('.nav__link');
-
-        window.addEventListener('scroll', () => {
-            const current = '';
-            const scrollY = window.pageYOffset;
-
-            sections.forEach(section => {
-                const sectionHeight = section.offsetHeight;
-                const sectionTop = section.offsetTop - 100;
-                const sectionId = section.getAttribute('id');
-
-                if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-                    navLinks.forEach(link => {
-                        link.classList.remove('active');
-                        if (link.getAttribute('href').includes(sectionId)) {
-                            link.classList.add('active');
-                        }
-                    });
-                }
-            });
-        });
-
-        // Smooth scrolling pour les liens
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Fonction pour ouvrir les PDFs (conservée du code original)
-        function openPDF(pdfPath) {
-            const existingModal = document.querySelector('.pdf-modal');
-            if (existingModal) {
-                document.body.removeChild(existingModal);
-            }
-            
-            const modal = document.createElement('div');
-            modal.className = 'pdf-modal';
-            modal.style.cssText = `
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background-color: rgba(0,0,0,0.8);
-                z-index: 1000;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                padding: 20px;
-            `;
-            
-            const iframe = document.createElement('iframe');
-            iframe.src = pdfPath;
-            iframe.style.cssText = `
-                width: 90%;
-                height: 90%;
-                border: none;
-                border-radius: 8px;
-                background-color: white;
-            `;
-            
-            const closeBtn = document.createElement('button');
-            closeBtn.innerHTML = '<i class="uil uil-times"></i>';
-            closeBtn.style.cssText = `
-                position: absolute;
-                top: 30px;
-                right: 30px;
-                background: var(--skin-color);
-                color: white;
-                border: none;
-                border-radius: 50%;
-                width: 40px;
-                height: 40px;
-                cursor: pointer;
-                font-size: 1.2rem;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                transition: .3s;
-            `;
-            
-            closeBtn.onmouseover = () => closeBtn.style.transform = 'scale(1.1)';
-            closeBtn.onmouseout = () => closeBtn.style.transform = 'scale(1)';
-            
-            closeBtn.onclick = () => document.body.removeChild(modal);
-            modal.onclick = (e) => {
-                if (e.target === modal) document.body.removeChild(modal);
-            };
-            
-            // Fermer avec Escape
-            document.addEventListener('keydown', function(e) {
-                if (e.key === 'Escape' && document.querySelector('.pdf-modal')) {
-                    document.body.removeChild(modal);
-                }
-            });
-            
-            modal.appendChild(iframe);
-            modal.appendChild(closeBtn);
-            document.body.appendChild(modal);
-        }
-
-        // Animation des éléments au scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        // Observer les cards
-        document.querySelectorAll('.card').forEach(card => {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(30px)';
-            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(card);
-        });
-
-        // Animation hover pour les certifications
-        document.querySelectorAll('.certification__item').forEach(item => {
-            item.addEventListener('mouseenter', function() {
-                this.style.transform = 'scale(1.05)';
-                this.querySelector('img').style.borderColor = 'var(--skin-color)';
-                this.querySelector('img').style.boxShadow = '0 4px 15px rgba(0, 0, 0, 0.2)';
-            });
-            
-            item.addEventListener('mouseleave', function() {
-                this.style.transform = 'scale(1)';
-                this.querySelector('img').style.borderColor = 'transparent';
-                this.querySelector('img').style.boxShadow = 'none';
-            });
-        });
-
-        // Parallax effect pour le hero
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const heroImg = document.querySelector('.hero__img');
-            if (heroImg && scrolled < window.innerHeight) {
-                heroImg.style.transform = `translateY(${scrolled * 0.5}px) rotate(-3deg)`;
+        document.getElementById('password').addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                checkPassword();
             }
         });
     </script>
