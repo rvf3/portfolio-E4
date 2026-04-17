@@ -7,6 +7,15 @@
     <title>Tableau des Compétences - Rafael Olivieri</title>
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <link rel="stylesheet" href="assets/css/tableau.css">
+    <style>
+        /* Override pour les lignes de section (plus robuste que nth-child) */
+        .competences-table tbody tr.section-header td {
+            color: white;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+    </style>
 </head>
 <body>
     <button class="theme-toggle" onclick="toggleTheme()">
@@ -30,7 +39,7 @@
                 <p class="page-subtitle">Synthèse de mes réalisations en formation et en milieu professionnel</p>
                 
                 <div class="action-buttons">
-                    <button class="button" onclick="openPDF('assets/pdf/tableau-e5.pdf')">
+                    <button class="button" onclick="openPDF('assets/pdf/tab-e4-rafael-olivieri.pdf')">
                         <i class="uil uil-file-alt"></i>
                         Consulter le tableau E4
                     </button>
@@ -51,23 +60,61 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
+
+                        <!-- ===== RÉALISATIONS EN COURS DE FORMATION ===== -->
+                        <tr class="section-header">
                             <td colspan="7">Réalisations en cours de formation</td>
                         </tr>
+
+                        <!-- Conception applications métiers Laravel + React Native -->
                         <tr>
-                            <td style="text-align: left; font-weight: 500;">Déployer un service projet Resappli</td>
+                            <td style="text-align: left; font-weight: 500;">
+                                Conception d'applications métiers : Client léger (Laravel) et application mobile (React Native)
+                            </td>
                             <td></td>
                             <td></td>
                             <td></td>
                             <td></td>
-                            <td class="pdf-cell" onclick="openPDF('assets/pdf/deployer-un-service.pdf')"></td>
+                            <td class="pdf-cell" onclick="openPDF('assets/pdf/conception-applications-metiers.pdf')"></td>
                             <td></td>
                         </tr>
+
+                        <!-- Déploiement site vitrine Wordpress + SEO -->
                         <tr>
+                            <td style="text-align: left; font-weight: 500;">
+                                Déploiement, hébergement et référencement SEO d'un site vitrine (Wordpress)
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td class="pdf-cell" onclick="openPDF('assets/pdf/deploiement-site-wordpress.pdf')"></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+
+                        <!-- Veille technologique Low-Code/No-Code -->
+                        <tr>
+                            <td style="text-align: left; font-weight: 500;">
+                                Réalisation d'une veille technologique sur le Low-Code/No-Code
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td class="pdf-cell" onclick="openPDF('assets/pdf/veille-low-code.pdf')"></td>
+                        </tr>
+
+                        <!-- ===== RÉALISATIONS EN MILIEU PROFESSIONNEL – 1ÈRE ANNÉE ===== -->
+                        <tr class="section-header">
                             <td colspan="7">Réalisations en milieu professionnel en cours de première année</td>
                         </tr>
+
+                        <!-- CRM Symfony + carte interactive Google Maps -->
                         <tr>
-                            <td style="text-align: left; font-weight: 500;">Analyser les objectifs et les modalités d'organisation d'un projet amélioration d'une carte interactive et création d'un CRM</td>
+                            <td style="text-align: left; font-weight: 500;">
+                                Développement d'un CRM (Symfony) et amélioration d'une carte interactive en Javascript (API Google Maps)
+                            </td>
                             <td></td>
                             <td></td>
                             <td></td>
@@ -75,54 +122,51 @@
                             <td></td>
                             <td></td>
                         </tr>
-                        <tr>
-                            <td style="text-align: left; font-weight: 500;">Mettre en place son environnement d'apprentissage personnel avec Symfony</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td class="pdf-cell" onclick="openPDF('assets/pdf/environnement-apprentissage.pdf')"></td>
-                        </tr>
-                        <tr>
-                            <td style="text-align: left; font-weight: 500;">Traiter des demandes concernant les applications</td>
-                            <td></td>
-                            <td></td>
-                            <td class="pdf-cell" onclick="openPDF('assets/pdf/amelioration-application.pdf')"></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td style="text-align: left; font-weight: 500;">Recenser et identifier les ressources numériques</td>
-                            <td></td>
-                            <td class="pdf-cell" onclick="openPDF('assets/pdf/ressources-numeriques.pdf')"></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td style="text-align: left; font-weight: 500;">Exploiter des référentiels, normes et standards adoptés par le prestataire informatique</td>
-                            <td class="pdf-cell" onclick="openPDF('assets/pdf/normes-prestataire-informatique.pdf')"></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
+
+                        <!-- ===== RÉALISATIONS EN MILIEU PROFESSIONNEL – 2ÈME ANNÉE ===== -->
+                        <tr class="section-header">
                             <td colspan="7">Réalisations en milieu professionnel en cours de seconde année</td>
                         </tr>
+
+                        <!-- CI/CD GitLab + sécurisation des secrets -->
                         <tr>
-                            <td></td>
-                            <td></td>
+                            <td style="text-align: left; font-weight: 500;">
+                                Mise en place d'une chaîne CI/CD via GitLab et sécurisation des secrets
+                            </td>
+                            <td class="pdf-cell" onclick="openPDF('assets/pdf/cicd-gitlab.pdf')"></td>
                             <td></td>
                             <td></td>
                             <td></td>
                             <td></td>
                             <td></td>
                         </tr>
+
+                        <!-- Pilotage Agile Kanban -->
+                        <tr>
+                            <td style="text-align: left; font-weight: 500;">
+                                Pilotage du projet selon la méthodologie Agile via un tableau Kanban
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td class="pdf-cell" onclick="openPDF('assets/pdf/pilotage-agile-kanban.pdf')"></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+
+                        <!-- Outil CLI Threat Intelligence Python/SQLite -->
+                        <tr>
+                            <td style="text-align: left; font-weight: 500;">
+                                Développement et tests unitaires d'un outil CLI de Threat Intelligence (Python/SQLite)
+                            </td>
+                            <td></td>
+                            <td class="pdf-cell" onclick="openPDF('assets/pdf/outil-cli-threat-intelligence.pdf')"></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+
                     </tbody>
                 </table>
             </div>
@@ -130,11 +174,9 @@
     </main>
 
     <script>
-        // Fonction pour changer de thème
         function toggleTheme() {
             const body = document.body;
             const themeToggle = document.querySelector('.theme-toggle i');
-            
             if (body.getAttribute('data-theme') === 'light') {
                 body.removeAttribute('data-theme');
                 themeToggle.className = 'uil uil-moon';
@@ -144,97 +186,53 @@
             }
         }
 
-        // Fonction pour ouvrir les PDFs
         function openPDF(pdfPath) {
             const existingModal = document.querySelector('.pdf-modal');
-            if (existingModal) {
-                document.body.removeChild(existingModal);
-            }
-            
+            if (existingModal) document.body.removeChild(existingModal);
+
             const modal = document.createElement('div');
             modal.className = 'pdf-modal';
             modal.style.cssText = `
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background-color: rgba(0,0,0,0.9);
-                z-index: 1000;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                padding: 20px;
-                backdrop-filter: blur(5px);
+                position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+                background-color: rgba(0,0,0,0.9); z-index: 1000;
+                display: flex; justify-content: center; align-items: center;
+                padding: 20px; backdrop-filter: blur(5px);
             `;
-            
+
             const iframe = document.createElement('iframe');
             iframe.src = pdfPath;
             iframe.style.cssText = `
-                width: 90%;
-                height: 90%;
-                border: none;
-                border-radius: 1rem;
-                background-color: white;
-                box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+                width: 90%; height: 90%; border: none; border-radius: 1rem;
+                background-color: white; box-shadow: 0 20px 50px rgba(0,0,0,0.5);
             `;
-            
+
             const closeBtn = document.createElement('button');
             closeBtn.innerHTML = '<i class="uil uil-times"></i>';
             closeBtn.style.cssText = `
-                position: absolute;
-                top: 30px;
-                right: 30px;
-                background: var(--skin-color);
-                color: white;
-                border: none;
-                border-radius: 50%;
-                width: 50px;
-                height: 50px;
-                cursor: pointer;
-                font-size: 1.5rem;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                transition: all 0.3s ease;
-                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+                position: absolute; top: 30px; right: 30px;
+                background: var(--skin-color); color: white; border: none;
+                border-radius: 50%; width: 50px; height: 50px; cursor: pointer;
+                font-size: 1.5rem; display: flex; align-items: center;
+                justify-content: center; transition: all 0.3s ease;
+                box-shadow: 0 4px 15px rgba(0,0,0,0.3);
             `;
-            
-            closeBtn.onmouseover = () => {
-                closeBtn.style.transform = 'scale(1.1)';
-                closeBtn.style.background = '#e74c3c';
-            };
-            closeBtn.onmouseout = () => {
-                closeBtn.style.transform = 'scale(1)';
-                closeBtn.style.background = 'var(--skin-color)';
-            };
-            
+            closeBtn.onmouseover = () => { closeBtn.style.transform = 'scale(1.1)'; closeBtn.style.background = '#e74c3c'; };
+            closeBtn.onmouseout  = () => { closeBtn.style.transform = 'scale(1)';   closeBtn.style.background = 'var(--skin-color)'; };
             closeBtn.onclick = () => document.body.removeChild(modal);
-            modal.onclick = (e) => {
-                if (e.target === modal) document.body.removeChild(modal);
-            };
-            
-            // Fermer avec Escape
+            modal.onclick = (e) => { if (e.target === modal) document.body.removeChild(modal); };
+
             document.addEventListener('keydown', function(e) {
-                if (e.key === 'Escape' && document.querySelector('.pdf-modal')) {
-                    document.body.removeChild(modal);
-                }
+                if (e.key === 'Escape' && document.querySelector('.pdf-modal')) document.body.removeChild(modal);
             });
-            
+
             modal.appendChild(iframe);
             modal.appendChild(closeBtn);
             document.body.appendChild(modal);
         }
 
-        // Animation d'apparition des cellules au survol
         document.querySelectorAll('.pdf-cell').forEach(cell => {
-            cell.addEventListener('mouseenter', function() {
-                this.style.transform = 'scale(1.05)';
-            });
-            
-            cell.addEventListener('mouseleave', function() {
-                this.style.transform = 'scale(1)';
-            });
+            cell.addEventListener('mouseenter', function() { this.style.transform = 'scale(1.05)'; });
+            cell.addEventListener('mouseleave', function() { this.style.transform = 'scale(1)'; });
         });
     </script>
 </body>
