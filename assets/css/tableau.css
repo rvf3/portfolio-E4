@@ -198,12 +198,20 @@
             color: var(--text-color);
         }
 
-        /* Section headers */
+        /* Section headers (Mode sombre par défaut) */
         .competences-table tbody tr.section-header td {
             color: white;
             font-weight: var(--font-bold);
             text-transform: uppercase;
             letter-spacing: 1px;
+            background-color: var(--box-color); /* Fond légèrement distinct pour marquer la séparation */
+        }
+
+        /* Section headers (Mode clair) */
+        [data-theme="light"] .competences-table tbody tr.section-header td {
+            background: #9B6C4B;
+            color: white; /* Forcé en blanc pour garantir la lisibilité sur le fond marron */
+            border-color: var(--title-color);
         }
 
         /* PDF Cells */
@@ -236,7 +244,7 @@
         }
 
         [data-theme="light"] .competences-table td {
-            background-color: hsl(45, 30%, 96%);
+            background-color: hsl(45, 85%, 92%);
             color: var(--text-color);
         }
 
